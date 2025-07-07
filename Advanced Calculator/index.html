@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCE+ </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-blue">
+  <main class="calculator">
+    <header class="brand">
+      cal-𝒙²
+      <div class="controls">
+        <select id="colorPicker" aria-label="Choose calculator color theme">
+          <option value="blue" selected>Blue</option>
+          <option value="purple">Purple</option>
+          <option value="white">White</option>
+          <option value="black">Black</option>
+          <option value="grey">Grey</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="display" id="display" aria-live="polite" aria-atomic="true">0</section>
+
+    <section class="buttons" id="buttons" role="group" aria-label="Calculator buttons">
+      <!-- Scientific Functions -->
+      <div class="button-group scientific">
+        <button data-func="π" data-tooltip="Pi">π</button>
+        <button data-func="e" data-tooltip="Euler’s Number">e</button>
+        <button data-func="sin" data-tooltip="Sine">sin</button>
+        <button data-func="cos" data-tooltip="Cosine">cos</button>
+        <button data-func="tan" data-tooltip="Tangent">tan</button>
+        <button data-func="log" data-tooltip="Logarithm (base 10)">log</button>
+        <button data-func="ln" data-tooltip="Natural Log">ln</button>
+        <button data-func="sqrt" data-tooltip="Square Root">√</button>
+        <button data-func="cbrt" data-tooltip="Cube Root">∛</button>
+        <button data-func="square" data-tooltip="Square">𝒙²</button>
+        <button data-func="cube" data-tooltip="Cube">𝒙³</button>
+        <button data-func="^" data-tooltip="Power">𝒙^𝓎</button>
+        <button data-func="(" data-tooltip="Open Bracket">(</button>
+        <button data-func=")" data-tooltip="Close Bracket">)</button>
+      </div>
+
+      <!-- Memory Functions -->
+      <div class="button-group memory">
+        <button data-func="MC" data-tooltip="Memory Clear">MC</button>
+        <button data-func="MR" data-tooltip="Memory Recall">MR</button>
+        <button data-func="M+" data-tooltip="Memory Add">M+</button>
+        <button data-func="M-" data-tooltip="Memory Subtract">M-</button>
+      </div>
+
+      <!-- Numeric Keypad -->
+      <div class="button-group numeric">
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button data-func="=" class="equal" data-tooltip="Calculate">=</button>
+      </div>
+
+      <!-- Operators -->
+      <div class="button-group operators">
+        <button data-value="/" class="operator">÷</button>
+        <button data-value="*" class="operator">×</button>
+        <button data-value="-" class="operator">−</button>
+        <button data-value="+" class="operator">+</button>
+        <button data-func="DEL" class="danger">DEL</button>
+        <button data-func="AC" class="danger">AC</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
